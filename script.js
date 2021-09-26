@@ -12,12 +12,8 @@ var arr = [];
 var current_item = 0;
 var del_btn = null;
 
-if(inp.files.length <= 1){
-    nav_right.style.display = "none";
-    nav_left.style.display = "none";
-}
-
 inp.addEventListener("change",()=>{
+    console.log("changeddd......");
     arr=[];
     nav_area.innerHTML = "";
     del_btn=null;
@@ -45,7 +41,6 @@ inp.addEventListener("change",()=>{
     }
     del_btn = nav_area.querySelectorAll(".del");
     del_btn = [...del_btn];
-    console.log(del_btn);
     del_btn.forEach((item)=>{
             item.addEventListener("click",()=>{
             current_item = del_btn.indexOf(item);
