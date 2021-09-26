@@ -1,0 +1,134 @@
+*{
+    margin:0px;
+    padding: 0px;
+    font-family: 'Bebas Neue', cursive;
+}
+html{
+    background-color: black;
+}
+#container{
+    display: flex;
+    flex-direction: row;
+}
+/* The central main container */
+#center_container{
+    flex:3;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#header_text{
+    font-size: 50px;
+    text-align: center;
+    color: teal;
+    margin-top: 15px;
+    max-height: 66px;
+    overflow: hidden;
+}
+#vid{
+    min-width :800px;
+    min-height:400px;
+    margin-top: 20px;
+}
+#nav_container{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#nav_container button{
+    background-color: teal;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid black;
+    font-size: 25px;
+    margin: 15px;
+    padding: 10px;
+}
+button:hover{
+    background-color: rgb(23, 184, 184);
+    transition: 0.3s ease;
+}
+.hiddenInputTag{
+    display: none;
+    width: 0px;
+    height: 0px;
+}
+
+
+/* The central left container ---- DONT know what to do with it now*/
+#left_container{
+    background-color: black;
+    flex:1;
+    height: 100vh;
+}
+
+/* The central right container ---- A navigator window that keeps all the loaded files */
+
+#right_container{
+    background-color: black;
+    flex: 1;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+#nav_area{
+    padding:5px;
+    margin:20px 5px 0px 5px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#nav_area a{
+    text-decoration: none;
+    color: black;
+}
+#nav_area li{
+    background-color: teal;
+    width: 100%;
+    height:50px;
+    margin: 5px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size:20px ;
+}
+#nav_area span{
+    margin-left: 10px;
+    flex:5;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#nav_area button {
+    flex: 1;
+    background-color: inherit;
+    border:none;
+    font-size: 20px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+#nav_area button:hover{
+    background-color: rgb(10, 233, 233);
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+#nav_area li:hover{
+    background-color: rgb(23, 184, 184);
+    transform: scale(1.045);
+    transition: 0.08s ease;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 800px){
+    #container{
+        flex-wrap: wrap;
+    }
+}
