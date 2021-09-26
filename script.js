@@ -12,6 +12,14 @@ var arr = [];
 var current_item = 0;
 var del_btn = null;
 
+if(arr.length <= 1){
+    nav_left.style.display = "none";
+    nav_right.style.display = "none";
+}else{
+    nav_left.style.display = "block";
+    nav_right.style.display = "block";
+}
+
 inp.addEventListener("change",()=>{
     arr=[];
     nav_area.innerHTML = "";
