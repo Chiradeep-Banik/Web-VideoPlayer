@@ -47,6 +47,9 @@ html{
     margin: 15px;
     padding: 10px;
 }
+#nav_left, #nav_right{
+    display: none;
+}
 button:hover{
     background-color: rgb(23, 184, 184);
     transition: 0.3s ease;
@@ -68,7 +71,7 @@ button:hover{
 /* The central right container ---- A navigator window that keeps all the loaded files */
 
 #right_container{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     flex: 1;
     overflow-y: scroll;
     height: 100vh;
@@ -125,10 +128,4 @@ button:hover{
     transform: scale(1.045);
     transition: 0.08s ease;
     overflow: hidden;
-}
-
-@media screen and (max-width: 800px){
-    #container{
-        flex-wrap: wrap;
-    }
 }

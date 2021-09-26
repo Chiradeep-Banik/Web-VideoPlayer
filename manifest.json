@@ -1,0 +1,9 @@
+{
+    "name": "Web-VideoPlayer",
+    "short_name": "VideoPlayer",
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "orientetion":"portrait"
+  }

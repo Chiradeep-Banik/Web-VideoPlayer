@@ -12,9 +12,12 @@ var arr = [];
 var current_item = 0;
 var del_btn = null;
 
-if(inp.files.length <= 1){
-    nav_right.style.display = "none";
+if(arr.length <= 1){
     nav_left.style.display = "none";
+    nav_right.style.display = "none";
+}else{
+    nav_left.style.display = "block";
+    nav_right.style.display = "block";
 }
 
 inp.addEventListener("change",()=>{
@@ -45,7 +48,6 @@ inp.addEventListener("change",()=>{
     }
     del_btn = nav_area.querySelectorAll(".del");
     del_btn = [...del_btn];
-    console.log(del_btn);
     del_btn.forEach((item)=>{
             item.addEventListener("click",()=>{
             current_item = del_btn.indexOf(item);
@@ -93,3 +95,13 @@ nav_right.addEventListener("click",()=>{
     src.src = URL.createObjectURL(arr[current_item]);
     vid.load();
 });
+
+if ( 'serviceWorker' in navigator ) {
+    console.log("123");
+    var reg_prom = navigator.serviceWorker.register('serviceWorker.js');
+    reg_prom
+        .then(reg=>console.log("👍🏿👍🏿 Successfully reg..",reg))
+        .catch( e=>console.log("👎🏿👎🏿 Failed to reg..", e));
+}else{
+    console.log("👎🏿👎🏿 No service worker..");
+}

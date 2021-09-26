@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
     <title>Video Player | Web</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <div id="container">
@@ -15,7 +17,7 @@
         </div>
         <div id= "center_container">
             <div id="header_text">Please select something</div>
-            <video controls width="400px" id="vid">
+            <video controls width="400px" id="vid" loop>
                 <source src="" type="video/mp4">
             </video>
             <div id= "nav_container">
@@ -33,5 +35,13 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        // if ( 'serviceWorker' in navigator ) {
+        //     var reg_prom = navigator.serviceWorker.register('serviceWorker.js');
+        //     reg_prom
+        //         .then(reg=>console.log("👍🏿👍🏿 Successfully reg..",reg))
+        //         .catch( e=>console.log("👎🏿👎🏿 Failed to reg..", e));
+        // }
+    </script>
 </body>
 </html>
