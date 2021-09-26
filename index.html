@@ -7,6 +7,7 @@
     <title>Video Player | Web</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <div id="container">
@@ -33,5 +34,10 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        if ( 'serviceWorker' in navigator ) {
+            navigator.serviceWorker.register('serviceWorker.js');
+        }
+    </script>
 </body>
 </html>
