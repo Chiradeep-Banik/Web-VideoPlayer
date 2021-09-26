@@ -13,7 +13,6 @@ var current_item = 0;
 var del_btn = null;
 
 inp.addEventListener("change",()=>{
-    console.log("changeddd......");
     arr=[];
     nav_area.innerHTML = "";
     del_btn=null;
@@ -88,3 +87,13 @@ nav_right.addEventListener("click",()=>{
     src.src = URL.createObjectURL(arr[current_item]);
     vid.load();
 });
+
+if ( 'serviceWorker' in navigator ) {
+    console.log("123");
+    var reg_prom = navigator.serviceWorker.register('serviceWorker.js');
+    reg_prom
+        .then(reg=>console.log("👍🏿👍🏿 Successfully reg..",reg))
+        .catch( e=>console.log("👎🏿👎🏿 Failed to reg..", e));
+}else{
+    console.log("👎🏿👎🏿 No service worker..");
+}
