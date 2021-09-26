@@ -1,6 +1,4 @@
-<div style=" text-align:center">
-    <h1>Web-VideoPlayer</h1>
-</div>
+# <div align="center">Web-VideoPlayer</div>
 
 ## Description
 This is a Web based Video Player that can play videos from your own machine.
@@ -17,7 +15,7 @@ This is a Web based Video Player that can play videos from your own machine.
 - CSS
 - Javascript
 
-## Feuture UPDATES :
+## Future UPDATES :
 
 - [ ] : A PWA implementation for the Web-VideoPlayer.
 - [ ] : Integrating the ability to play anything from any url.
