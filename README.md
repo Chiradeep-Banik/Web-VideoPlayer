@@ -1,5 +1,5 @@
+.<div align="center">![APP ICON](icons/chrome/chrome-installprocess-128-128.png)</div>
 # <div align="center">Web-VideoPlayer</div>
-
 ## Description
 This is a Web based Video Player that can play videos from your own machine.
 
