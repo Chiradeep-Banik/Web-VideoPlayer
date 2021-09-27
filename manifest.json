@@ -1,11 +1,12 @@
 {
     "name": "Web-VideoPlayer",
     "short_name": "VideoPlayer",
-    "start_url": "index.html",
+    "description": "A web video player to play videos on your devices.",
+    "start_url": "./index.html",
     "display": "fullscreen",
     "theme_color": "#000000",
     "background_color": "#000000",
-    "orientetion":"portrait",
+    "orientation":"landscape",
     "icons": [
       {
         "src": "icons/windows10/SmallTile.scale-100.png",
