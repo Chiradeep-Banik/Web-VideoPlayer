@@ -328,14 +328,6 @@
         "sizes": "256x256"
       },
       {
-        "src": "icons/msteams/msteams-192-192.png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "icons/msteams/msteams-silhouette-32-32.png",
-        "sizes": "32x32"
-      },
-      {
         "src": "icons/android/android-launchericon-512-512.png",
         "sizes": "512x512"
       },
