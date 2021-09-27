@@ -98,7 +98,7 @@ nav_right.addEventListener("click",()=>{
 
 if ( 'serviceWorker' in navigator ) {
     console.log("123");
-    var reg_prom = navigator.serviceWorker.register('./scripts/serviceWorker.js');
+    var reg_prom = navigator.serviceWorker.register('serviceWorker.js');
     reg_prom
         .then(reg=>console.log("👍🏿👍🏿 Successfully reg..",reg))
         .catch( e=>console.log("👎🏿👎🏿 Failed to reg..", e));
