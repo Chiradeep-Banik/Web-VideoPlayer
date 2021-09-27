@@ -1,18 +1,27 @@
-self.addEventListener("install",(e)=>{
-    console.log("Service Worker Installed");
+var cacheName = 'v1:static';
+
+self.addEventListener('install',async e=>{
     e.waitUntil(
-      caches.open("static").then((cache)=>{
-          return cache.addAll(["./index.html","./Icons/logos.png"]);
-      }).catch((err)=>{
-          console.log("Badd--",err);
-      })
+        caches.open(cacheName).then(async cache=>{
+            try {
+            await cache.addAll([
+              '.',
+              './styles/style.css',
+              './scripts/script.js',
+              './scripts/serviceWorker.js'
+            ]);
+            console.log('All resources have been fetched and cached.');
+          } catch (err) {
+            return console.log(err);
+          }
+        })
     );
 });
 
-self.addEventListener("fetch",(e)=>{
-  e.respondWith(
-    caches.match(e.request).then((response)=>{
-      return response || fetch(e.request);
-    })
-  );
+self.addEventListener('fetch', event=>{
+    event.respondWith(
+        caches.match(event.request).then((response)=>{
+            return response || fetch(event.request);
+        })
+    );
 });
