@@ -7,6 +7,8 @@ html{
     background-color: black;
 }
 #container{
+    position: fixed;
+    width: 100%;
     display: flex;
     flex-direction: row;
 }
@@ -27,8 +29,9 @@ html{
     overflow: hidden;
 }
 #vid{
-    min-width :800px;
-    min-height:400px;
+    position: relative;
+    width: 80%;
+    height: 60%;
     margin-top: 20px;
 }
 #nav_container{
@@ -50,7 +53,7 @@ html{
 #nav_left, #nav_right{
     display: none;
 }
-button:hover{
+#nav_container button:hover{
     background-color: rgb(23, 184, 184);
     transition: 0.3s ease;
 }
@@ -128,4 +131,29 @@ button:hover{
     transform: scale(1.045);
     transition: 0.08s ease;
     overflow: hidden;
+}
+
+
+@media screen and (max-width: 800px){
+    #container{
+        position: relative;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #center_container{
+        flex:1;
+    }
+    #right_container{
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: scroll;
+    }
+    #nav_area{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #nav_area li{
+        width: 20%;
+        margin: 5px;
+    }
 }
