@@ -398,6 +398,14 @@
       {
         "src": "icons/firefox/firefox-general-16-16.png",
         "sizes": "16x16"
+      },
+      {
+        "src": "icons/msteams/msteams-192-192.png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "icons/msteams/msteams-silhouette-32-32.png",
+        "sizes": "32x32"
       }
     ]
   }
