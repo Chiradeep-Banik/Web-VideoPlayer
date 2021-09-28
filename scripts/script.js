@@ -32,7 +32,7 @@ inp.addEventListener("change",()=>{
         inp_file.push(inp.files[i]);
         let myElm = document.createElement("li");
         myElm.innerHTML=`<span>${inp_file[i].name}</span>
-                        <button class="del">&#128473;</button>`;
+                        <button class="del"><i class="fas fa-times"></i></button>`;
         myElm.addEventListener("click",()=>{
             var name = myElm.querySelector("span").innerHTML;
             for(let j =0; j < inp_file.length; j++){
