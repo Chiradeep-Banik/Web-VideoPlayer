@@ -1,10 +1,24 @@
+:root{
+    --dark_theame: black;
+    --light_theme: white;
+    --dark_primary: teal;
+    --dark_secondary: rgb(23, 184, 184);
+    --dark_tertiary: rgb(10, 233, 233);
+    --light_primary: rgb(3, 164, 228);
+    --light_secondary: rgb(37, 193, 255);
+    --light_tertiary: rgb(168, 230, 255);
+}
+
 *{
     margin:0px;
     padding: 0px;
     font-family: 'Bebas Neue', cursive;
 }
 html{
-    background-color: black;
+    background-color: var(--dark_theame);
+}
+html.light{
+    background-color: var(--light_theme);
 }
 #container{
     position: fixed;
@@ -23,14 +37,17 @@ html{
 #header_text{
     font-size: 50px;
     text-align: center;
-    color: teal;
+    color: var(--dark_primary);
     margin-top: 15px;
     max-height: 66px;
     overflow: hidden;
 }
+#header_text.light{
+    color: var(--light_primary);
+}
 #vid{
     position: relative;
-    width: 80%;
+    width: 100%;
     height: 60%;
     margin-top: 20px;
 }
@@ -41,7 +58,7 @@ html{
     justify-content: space-between;
 }
 #nav_container button{
-    background-color: teal;
+    background-color: var(--dark_primary);
     border-radius: 6px;
     cursor: pointer;
     padding: 5px;
@@ -50,12 +67,18 @@ html{
     margin: 15px;
     padding: 10px;
 }
+#nav_container button.light{
+    background-color: var(--light_primary);
+}
 #nav_left, #nav_right{
     display: none;
 }
 #nav_container button:hover{
-    background-color: rgb(23, 184, 184);
+    background-color: var(--dark_secondary);
     transition: 0.3s ease;
+}
+#nav_container button.light:hover{
+    background-color: var(--light_secondary);
 }
 .hiddenInputTag{
     display: none;
@@ -64,22 +87,17 @@ html{
 }
 
 
-/* The central left container ---- DONT know what to do with it now*/
-#left_container{
-    background-color: black;
-    flex:1;
-    height: 100vh;
-}
-
 /* The central right container ---- A navigator window that keeps all the loaded files */
 
 #right_container{
-    background-color: rgb(0, 0, 0);
+    background-color: var(--dark_theame);
     flex: 1;
     overflow-y: scroll;
     height: 100vh;
 }
-
+#right_container.light{
+    background-color: var(--light_theme);
+}
 #nav_area{
     padding:5px;
     margin:20px 5px 0px 5px;
@@ -93,7 +111,7 @@ html{
     color: black;
 }
 #nav_area li{
-    background-color: teal;
+    background-color: var(--dark_primary);
     width: 100%;
     height:50px;
     margin: 5px 0px;
@@ -103,6 +121,9 @@ html{
     justify-content: space-between;
     cursor: pointer;
     font-size:20px ;
+}
+#nav_area li.light{
+    background-color: var(--light_primary);
 }
 #nav_area span{
     margin-left: 10px;
@@ -121,18 +142,26 @@ html{
     cursor: pointer;
 }
 #nav_area button:hover{
-    background-color: rgb(10, 233, 233);
+    background-color: var(--dark_tertiary);
     transform: scale(1.1);
     transition: 0.3s ease;
 }
-
+#nav_area button.light:hover{
+    background-color: var(--light_tertiary);
+}
 #nav_area li:hover{
-    background-color: rgb(23, 184, 184);
+    background-color: var(--dark_secondary);
     transform: scale(1.045);
     transition: 0.08s ease;
     overflow: hidden;
 }
-
+#nav_area li.light:hover{
+    background-color: var(--light_secondary);
+}
+footer{
+    border: 0;
+    left: 0;
+}
 
 @media screen and (max-width: 800px){
     #container{

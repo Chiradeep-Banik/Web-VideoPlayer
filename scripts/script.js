@@ -11,7 +11,6 @@ var nav_area = document.querySelector("#nav_area");
 var current_item = 0;
 var del_btn = null;
 var inp_file = [];
-var del = [];
 
 if(inp_file.length <= 1){
     nav_left.style.display = "none";
@@ -22,6 +21,11 @@ if(inp_file.length <= 1){
 }
 
 inp.addEventListener("change",()=>{
+    if(inp.files.length == 0){
+        src.src ="";
+        vid.load();
+        header_text.innerHTML = "Please select something";
+    }
     inp_file=[];
     nav_area.innerHTML = "";
     del_btn=null;
@@ -52,6 +56,11 @@ inp.addEventListener("change",()=>{
         nav_right.style.display = "block";
         nav_left.style.display = "block";
     }
+    if(document.querySelector("html").classList.contains("light")){
+        document.querySelectorAll("li").forEach((item)=>{
+            item.classList.toggle("light");
+        });
+    }
     del_btn = nav_area.querySelectorAll(".del");
     del_btn = [...del_btn];
     del_btn.forEach((item)=>{
@@ -65,6 +74,8 @@ inp.addEventListener("change",()=>{
                 nav_right.style.display = "none";
                 nav_left.style.display = "none";
                 current_item = 0;
+                src.src = URL.createObjectURL(inp_file[current_item]);
+                vid.load();
             }else if(inp_file.length == 0){
                     src.src = "";
                     vid.load();
@@ -102,6 +113,30 @@ nav_right.addEventListener("click",()=>{
     }
     src.src = URL.createObjectURL(inp_file[current_item]);
     vid.load();
+});
+
+vid.addEventListener("ended",()=>{
+    if(inp_file.length != 1){
+        nav_right.click();
+        vid.play();
+    }else{
+        vid.pause();
+    }
+});
+
+//Theame changing---------------
+
+var theme = document.querySelector("#theme");
+theme.addEventListener("click",()=>{
+    document.querySelector("html").classList.toggle("light");
+    document.querySelector("#header_text").classList.toggle("light");
+    document.querySelectorAll("button").forEach((item)=>{
+        item.classList.toggle("light");
+    });
+    document.querySelector("#right_container").classList.toggle("light");
+    document.querySelectorAll("li").forEach((item)=>{
+        item.classList.toggle("light");
+    });
 });
 
 //Registering the Service Worker -------------------------------------------------------------
